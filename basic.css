@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+html{
+  background-color:gainsboro;
+  }
+
+body{
+  margin:3em;
+  max-width:40em;
+/*  font-family:sans-serif; */
+  }
+
+pre{
+  padding:5px;
+  border-left-style:solid;
+  border-width:thin;
+  font-size:1.1em;
+  }
+
+/* blue is the default link color */
+/* purple is the default visited color */
+a:link {
+  color:navy;
+}
+a:visited {
+  color:navy;
+}
+a:hover {
+  color:blue;
+}
