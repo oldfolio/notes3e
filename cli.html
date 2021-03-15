@@ -12,16 +12,19 @@
 <h1>Command Line Notes</h1>
 <h3>7-ZIP</h3>
 <pre>
-7za a -mhe=on -p archive-name.7z original-file
+7za a -mhe -p archive-name.7z original-file
 </pre>
 <p>a = add to archive<br />
--mhe=on = encrypt headers as well as data<br />
+-mhe = encrypt headers as well as data<br />
 -p = prompt for password</p>
 <p>You can also add the switch</p>
 <pre>
 -mx0
 </pre>
-<p>if you do not wish to do any compressing.</p>
+<p>if you do not wish to do any compressing. For maximum compression, use:</p>
+<pre>
+7za a -mx9 -mhe -p archive-name.7z original-file
+</pre>
 <h3>APT</h3>
 <pre>
 apt-get --no-install-recommends install package-name
