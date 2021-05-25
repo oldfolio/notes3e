@@ -395,8 +395,9 @@ rclone mount --vfs-cache-mode full remote: /local/mount/directory
 <p>To <strong>check</strong> if the source and the destination are the same
 without making any changes in either, run:</p>
 <pre>
-rclone check [--size-only] source/directory scw_cabinet:
+rclone check [--size-only --fast-list] source/directory scw_cabinet:
 </pre>
+<p>The --fast-list flag reduces the number of transactions in the request. This can resolve some 403 Rate Limit errors with Google Drive.</p>
 <p>If you wish to <strong>exclude</strong> a directory (such as, /source-directory/ignore-this-directory/) from a sync operation, you would  use a construction like the following:</p>
 <pre>
 rclone sync -P --exclude "/ignore-this-directory/**" /source-directory remote:target-directory
