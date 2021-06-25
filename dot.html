@@ -33,6 +33,10 @@
 /etc/nginx/sites-enabled/<a href="dot/CF-SSL-Site.txt">site-config-cf-ssl</a> or
 /usr/local/etc/nginx/sites-enabled/<a href="dot/CF-SSL-Site.txt">site-config-cf-ssl</a>
 </pre>
+<p>To change the nameservers that appear in <strong>/etc/resolv.conf</strong>, add the following line to /etc/dhcp/dhclient.conf:</p>
+<pre>
+supersede domain-name-servers 74.82.42.42, 1.1.1.1;
+</pre>
 <p>If you wish to use U2F keys on a Debian-based system, you may need to add the following file:</p>
 <pre>
 /etc/udev/rules.d/<a href="dot/70-u2f.rules">70-u2f.rules</a>
